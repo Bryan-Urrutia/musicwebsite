@@ -7,22 +7,41 @@ module.exports = {
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
   ],
+  mode: 'jit',
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "960px",
+        xl: "1310px",
       },
     },
     extend: {
+      fontFamily: {
+        alexBrush: [`var(--font-alexBrush)`],
+        montserrat: [`var(--font-montserrat)`],
+      },
+      backgroundImage: {
+        singerOverlay: 'url(/assets/hero/singer-overlay.png)',
+        newsletter: 'url(/assets/newsletter/bg.png)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        primary2: '#06062a',
+        secondary2: '#151538',
+        tertiary2: '#242445',
+        accent2: {
+          DEFAULT: '#7f1cfc',
+          hover: '6519c6',
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -73,5 +92,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('tailwind-scrollbar')],
 }
