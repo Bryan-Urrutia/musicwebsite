@@ -1,2 +1,2 @@
 docker build -t musicwebsite:v1 .
-docker run -name musicwebsite -p 3000:3000 music
+docker run -name musicwebsite -p 3000:3000 musicwebsite:v1
